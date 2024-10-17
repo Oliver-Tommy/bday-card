@@ -1,15 +1,28 @@
 
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    background: linear-gradient(45deg, #3483eb 0%, #78b1e0 99%, #c4ebfa 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-image: url('/assets/images/d7eysjz-b94533d6-5a4a-4a45-aecd-a1e41fe03895.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000000;
 }
-
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
 .container {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,55 +30,32 @@ html {
     height: 100vh;
     text-align: center;
 }
-
 h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+    animation: pulsate 1.5s infinite alternate;
 }
-
+@keyframes pulsate {
+    from { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d; }
+    to { text-shadow: 0 0 15px #ff4d4d, 0 0 25px #ff4d4d, 0 0 35px #ff4d4d; }
+}
 .video-container {
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     margin-bottom: 20px;
 }
-
-.video-placeholder {
-    background-color: #000;
+#ytplayer {
     width: 100%;
-    padding-top: 56.25%;
-    /* 16:9 aspect ratio */
-    position: relative;
+    height: 562px; /* 16:9 ratio for 1000px width */
+    border: none;
 }
-
-.video-placeholder::after {
-    content: 'Video Placeholder';
+.particle {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-.balloon {
-    position: absolute;
-    width: 30px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #000000;
     border-radius: 50%;
-    animation: float 15s infinite ease-in-out;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) translateX(-10px);
-    }
-
-    50% {
-        transform: translateY(-100vh) translateX(10px);
-    }
+    pointer-events: none;
+    opacity: 0;
 }
