@@ -29,6 +29,7 @@ body, html {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    margin-top: 15%;
 }
 h1 {
     font-size: 4rem;
@@ -58,4 +59,8 @@ h1 {
     border-radius: 50%;
     pointer-events: none;
     opacity: 0;
+}
+
+#spotify {
+    margin-top: 130px;
 }
