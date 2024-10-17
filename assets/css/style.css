@@ -27,9 +27,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     text-align: center;
-    margin-top: 15%;
 }
 h1 {
     font-size: 4rem;
@@ -61,6 +59,14 @@ h1 {
     opacity: 0;
 }
 
-#spotify {
-    margin-top: 130px;
-}
+/* @media (min-width:480px)  {
+    #spotify {
+        margin-top: 30%;
+    }
+    
+    .container {
+        margin-top: 30%;
+    }
+} */
+
+
