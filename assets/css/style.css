@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    background-image: url('/assets/images/d7eysjz-b94533d6-5a4a-4a45-aecd-a1e41fe03895.png');
+    background-image: url('../images/d7eysjz-b94533d6-5a4a-4a45-aecd-a1e41fe03895.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
